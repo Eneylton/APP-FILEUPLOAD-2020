@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista de Fotos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-fab top right edge>
+    <button ion-fab mini (click)="formadd()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+
+  </ion-fab>
+
+  <ion-list style="margin-top: 30px;">
+    <ion-item-sliding *ngFor="let loja of lojas">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="{{serv+loja.imagens}}">
+        </ion-thumbnail>
+        <h1>{{loja.imagens}}</h1>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
